@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/friend_background_with_color"
+    android:fillViewport="true">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:id="@+id/confirm_delete"
+            android:layout_width="0dp"
+            android:layout_height="330dp"
+            android:background="#F5F5F5"
+            android:orientation="vertical"
+            android:translationZ="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.9"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Confirm Your Delete!"
+                android:textColor="#463734"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="27dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="Username label"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Email"
+                android:textColor="#463734"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+
+            <EditText
+                android:id="@+id/username_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/round_corner_green"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="email"
+                android:paddingStart="20dp"
+                android:textColorHint="#A3A3A3"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="27dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="20dp"
+                android:contentDescription="Password label"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Password"
+                android:textColor="#463734"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/round_corner_green"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="password"
+                android:paddingStart="20dp"
+                android:textColorHint="#A3A3A3"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginHorizontal="20dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/delete_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#FF700B"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Delete " />
+
+
+                <Button
+                    android:id="@+id/cancel_delete_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#76A94F"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Cancel" />
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="84dp"
+            android:layout_height="87dp"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/avatar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.03"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/editAvatar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="-8dp"
+            android:layout_marginBottom="3dp"
+            android:src="@drawable/edit_icon"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="@id/avatar"
+            app:layout_constraintEnd_toEndOf="@id/avatar" />
+
+
+        <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="132dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="MorningBird"
+        android:textColor=" #463734"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.036"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Email"
+        android:textColor=" #A3A3A3"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.031"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userName"
+        app:layout_constraintVertical_bias="0.017" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="22dp"
+        android:layout_height="25dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:gravity="bottom|left"
+        android:text="Lv. "
+        android:textColor=" #A3A3A3"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.028"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email"
+        app:layout_constraintVertical_bias="0.029" />
+
+    <TextView
+        android:id="@+id/levelNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:gravity="bottom|left"
+        android:text="1"
+        android:textColor=" #A3A3A3"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.002"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/email"
+        app:layout_constraintVertical_bias="0.003" />
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="360dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="1dp"
+            android:src="@drawable/level_bar2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintVertical_bias="0.001" />
+
+        <ImageView
+        android:id="@+id/level"
+        android:layout_width="250dp"
+        android:layout_height="16dp"
+        android:src="@drawable/level_bar1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.006"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.001" />
+
+    <TextView
+        android:id="@+id/levelPoints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="30"
+        android:textAlignment="gravity"
+        android:textColor=" #000000"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.025"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.017" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="/200"
+        android:textAlignment="gravity"
+        android:textColor=" #A3A3A3"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/levelPoints"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.017" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/galleryContainer"
+            android:layout_width="370dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rectangle_background"
+            android:padding="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView2">
+
+            <ImageView
+                android:id="@+id/imageIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:fontFamily="@font/poppins_bold"
+                android:src="@drawable/image_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/galleryText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="My Selfie Gallery"
+                android:textColor="#F5F5F5"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.337"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="My Alarms"
+            android:textColor=" #463734"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.033"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/galleryContainer"
+            app:layout_constraintVertical_bias="0.006" />
+
+        <FrameLayout
+            android:id="@+id/fragment_alarms"
+            android:name="com.COMP900018.finalproject.AlarmListFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
+        />
+
+        <LinearLayout
+            android:id="@+id/setting"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.476"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_alarms"
+            app:layout_constraintVertical_bias="0.06"
+            app:layout_constraintWidth_percent="0.9">
+
+
+
+            <TextView
+                android:id="@+id/privacy_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25px"
+                android:layout_marginBottom="25px"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Privacy Settings"
+                android:clickable="true"
+                android:focusable="true"
+                android:textColor=" #463734"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#D9D9D9" />
+
+            <TextView
+                android:id="@+id/logOut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25px"
+                android:layout_marginBottom="25px"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Logout"
+                android:textColor=" #463734"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#D9D9D9" />
+
+            <TextView
+                android:id="@+id/deleteAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25px"
+                android:layout_marginBottom="25px"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Delete Account"
+                android:textColor="#FF0000"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#D9D9D9"
+                android:layout_marginBottom="100dp"/>
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/risingStar"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="148dp"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/circle_background"
+            android:focusable="true"
+            android:scaleType="center"
+            android:src="@drawable/rising_star"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/avatar"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="68dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="--"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.086"
+            app:layout_constraintStart_toEndOf="@+id/risingStar"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+            <FrameLayout
+            android:id="@+id/alarmFragment"
+            android:name="com.COMP900018.finalproject.AddAlarmFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_weight="1" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

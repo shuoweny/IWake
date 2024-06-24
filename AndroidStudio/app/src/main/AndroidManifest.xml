@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Add accelerometer sensor feature -->
+    <uses-feature
+        android:name="android.hardware.sensor.accelerometer"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.sensor.light"
+        android:required="true" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FinalProject"
+        tools:targetApi="31">
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.COMP900018.finalproject.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".ui.checkReaction.ReactionActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:label="@string/title_activity_reaction"
+            android:theme="@style/Theme.FinalProject.Fullscreen" />
+        <activity
+            android:name=".ui.addFriend.RequestActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:label="@string/title_activity_request"
+            android:theme="@style/Theme.FinalProject.Fullscreen" /> <!-- uncomment to test login, sign up, motion -->
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:exported="true"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name" /> <!-- <activity -->
+        <!-- android:name=".MainActivity" -->
+        <!-- android:exported="true" -->
+        <!-- android:label="@string/app_name"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+        <!-- <activity -->
+        <!-- android:name=".ui.login.LoginActivity" -->
+        <!-- android:exported="true" -->
+        <!-- android:label="@string/app_name"> -->
+        <!-- </activity> -->
+        <activity
+            android:name=".ui.avartar.AvatarSelectActivity"
+            android:exported="true"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".ui.gallery.GalleryActivity"
+            android:exported="true"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".ui.privacy.PrivacyActivity"
+            android:exported="true"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".ui.signup.SignUpActivity"
+            android:exported="true"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".ui.shake.ShakeOrangeActivity"
+            android:exported="true"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".ui.shake.ShakeGreenActivity"
+            android:exported="true"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".ui.light.LightActivity"
+            android:exported="true"
+            android:label="Final Project" />
+
+        <activity
+            android:name=".ui.alarm.AlarmSetActivity"
+            android:exported="true">
+
+        </activity>
+
+        <activity
+            android:name=".ui.alarm.AlarmSetOffActivity"
+            android:exported="true"
+            android:label="Final Project" />
+
+        <activity
+            android:name=".ui.camera.CameraPage"
+            android:exported="true"
+            android:label="Final Project" />
+
+        <activity
+            android:name=".ui.camera.CameraActivity"
+            android:exported="true"
+            android:label="Final Project">
+
+        </activity>
+        <activity
+            android:name=".ui.alarm.AlarmSuccessActivity"
+            android:exported="true"
+            android:label="Final Project" />
+
+        <receiver android:name=".alarm.AlarmReceiver"
+            android:exported="true"
+            />
+        <service android:name=".alarm.AlarmSoundService"
+            android:exported="true"
+            />
+        <service android:name=".alarm.AlarmVibrationService"
+            android:exported="true"
+            />
+    </application>
+
+</manifest>

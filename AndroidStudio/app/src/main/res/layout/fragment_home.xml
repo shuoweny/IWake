@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home"
+    android:clipToOutline="true"
+    android:theme="@style/Theme.AppCompat.NoActionBar">
+
+    <TextView
+        android:id="@+id/welcome_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="72dp"
+        android:fontFamily="@font/poppins_black"
+        android:text="Hi"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/date_display"
+        android:layout_width="133dp"
+        android:layout_height="24dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="136dp"
+        android:gravity="top"
+        android:text="Mon, 22/9/30"
+        android:textColor="#FF700B"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="84dp"
+        android:layout_height="87dp"
+        android:src="@drawable/avatar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.099" />
+
+    <TextView
+        android:id="@+id/recap_of_th"
+        android:layout_width="191dp"
+        android:layout_height="31dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:gravity="top"
+        android:text="Recap Of This Week"
+        android:textColor="#463734"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.26" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutAlarm"
+        android:layout_width="108.67dp"
+        android:layout_height="106dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/round_corner_green"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.342">
+
+        <TextView
+            android:id="@+id/alarmNumber"
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:fontFamily="@font/poppins_black"
+            android:text="5"
+            android:textAlignment="center"
+            android:textColor="#463734"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/alarmsText"
+            android:layout_width="match_parent"
+            android:layout_height="27dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Alarms"
+            android:textAlignment="center"
+            android:textColor="#463734"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayoutPoints"
+        android:layout_width="108.67dp"
+        android:layout_height="106dp"
+        android:background="@drawable/round_corner_green"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/linearFrendsBeat"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toEndOf="@+id/linearLayoutAlarm"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.342">
+
+        <TextView
+            android:id="@+id/pointsEarned"
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:fontFamily="@font/poppins_black"
+            android:text="60"
+            android:textAlignment="center"
+            android:textColor="#463734"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/pointsText"
+            android:layout_width="match_parent"
+            android:layout_height="27dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="pts earned"
+            android:textAlignment="center"
+            android:textColor="#463734"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearFrendsBeat"
+        android:layout_width="108.67dp"
+        android:layout_height="106dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/round_corner_green"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.342">
+
+        <TextView
+            android:id="@+id/friendsNumber"
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:fontFamily="@font/poppins_black"
+            android:text="7"
+            android:textAlignment="center"
+            android:textColor="#463734"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/numberText"
+            android:layout_width="match_parent"
+            android:layout_height="27dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Friends Beat"
+            android:textAlignment="center"
+            android:textColor="#463734"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="108dp"
+        android:background="@drawable/tend_to_wake"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.528"
+        app:layout_constraintWidth_percent="0.92">
+
+        <TextView
+            android:id="@+id/tendtowakeText"
+            android:layout_width="wrap_content"
+            android:layout_height="31dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center"
+            android:text="You tend to wake up at..."
+            android:textColor="#F5F5F5"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.26" />
+
+        <TextView
+            android:id="@+id/wakeupTime"
+            android:layout_width="99dp"
+            android:layout_height="36dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center"
+            android:text="8:36 am"
+            android:textColor="#F5F5F5"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.509"
+            app:layout_constraintStart_toEndOf="@+id/tendtowakeText"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.208" />
+
+        <TextView
+            android:id="@+id/goodJob"
+            android:layout_width="136dp"
+            android:layout_height="40dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="right"
+            android:text="Good Job!"
+            android:textColor="#FED3B3"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.893"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.764" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/recommand_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.95"
+            app:layout_constraintHorizontal_bias="0.487"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintWidth_percent="0.9">
+
+            <FrameLayout
+                android:id="@+id/recommendationListView"
+                android:name="com.COMP900018.finalproject.AlarmListFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="80dp" />
+
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="871dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

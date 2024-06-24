@@ -1,0 +1,172 @@
+<!-- Auto layout, variables, and unit scale are not yet supported -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToOutline="true"
+    android:background="@drawable/login_background_with_color"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        android:translationZ="100dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="80dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Welcome!"
+            android:textColor="#463734"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:contentDescription="Welcome message"
+            tools:ignore="HardcodedText" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="27dp"
+            android:layout_marginTop="36dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Email"
+            android:textColor="#463734"
+            android:textSize="18sp"
+            android:contentDescription="Username label"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/round_corner_green"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="email"
+            android:paddingStart="20dp"
+            android:textColorHint="#A3A3A3"
+            android:textSize="16sp"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="27dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Password"
+            android:textColor="#463734"
+            android:textSize="18sp"
+            android:contentDescription="Password label"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/round_corner_green"
+            android:fontFamily="@font/poppins_regular"
+            android:inputType="textPassword"
+            android:hint="password"
+            android:paddingStart="20dp"
+            android:textColorHint="#A3A3A3"
+            android:textSize="16sp"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/forget_password"
+            android:layout_width="match_parent"
+            android:layout_height="18dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Forgot your password?"
+            android:gravity="end"
+            android:textColor="#463734"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/sign_up_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="#76A94F"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Sign up" />
+
+            <Button
+                android:id="@+id/log_in_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="#FF700B"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Log in " />
+        </LinearLayout>
+
+
+        <!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:layout_margin="20dp"-->
+<!--            android:orientation="horizontal">-->
+
+<!--            <ImageButton-->
+<!--                android:id="@+id/google_login"-->
+<!--                android:layout_width="48dp"-->
+<!--                android:layout_height="48dp"-->
+<!--                android:padding="8dp"-->
+<!--                android:backgroundTint="#ffffff"-->
+<!--                app:srcCompat="@drawable/google_logo"-->
+<!--                android:background="@android:color/transparent"-->
+<!--                android:contentDescription="Login with Google"/>-->
+
+<!--            <ImageButton-->
+<!--                android:id="@+id/fb_login"-->
+<!--                android:layout_width="48dp"-->
+<!--                android:layout_height="48dp"-->
+<!--                android:padding="8dp"-->
+<!--                android:backgroundTint="#ffffff"-->
+<!--                app:srcCompat="@drawable/fb_logo"-->
+<!--                android:background="@android:color/transparent"-->
+<!--                android:contentDescription="Login with Facebook"/>-->
+
+<!--            <ImageButton-->
+<!--                android:id="@+id/apple_login"-->
+<!--                android:layout_width="48dp"-->
+<!--                android:layout_height="48dp"-->
+<!--                android:padding="8dp"-->
+<!--                android:backgroundTint="#ffffff"-->
+<!--                app:srcCompat="@drawable/apple_logo"-->
+<!--                android:background="@android:color/transparent"-->
+<!--                android:contentDescription="Login with Apple"/>-->
+
+
+
+<!--        </LinearLayout>-->
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/bottomImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

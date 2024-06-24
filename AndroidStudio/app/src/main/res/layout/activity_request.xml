@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/friend_background_with_color"
+    tools:context=".ui.friends.friendsFragment">
+
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="193dp"
+        android:layout_height="47dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.073"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.055">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:src="@drawable/arrow"
+            tools:layout_editor_absoluteX="6dp"
+            tools:layout_editor_absoluteY="41dp" />
+
+        <TextView
+            android:id="@+id/add_a_friend"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="bottom"
+            android:text="Add a Friend"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="28dp"
+            tools:layout_editor_absoluteY="33dp" />
+
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/searchEditText"
+        android:layout_width="359dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/round_search_edit_text"
+        android:drawableStart="@drawable/search"
+        android:drawablePadding="10dp"
+        android:hint="Search by username or id"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:paddingStart="16px"
+        android:paddingTop="12px"
+        android:paddingEnd="122px"
+        android:paddingBottom="14px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/request_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="638dp"
+        android:clipToPadding="false"
+        android:paddingBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchEditText"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/search_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="513dp"
+        android:background="#E8F5C1"
+        android:clipToPadding="false"
+        android:paddingBottom="50dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchEditText"
+        app:layout_constraintVertical_bias="0.018" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

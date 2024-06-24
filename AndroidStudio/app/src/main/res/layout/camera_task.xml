@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/camerabg"
+    >
+    <TextView
+        android:id="@+id/customTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Record the\nmoment!"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="30dp"
+        android:textColor="#FFFFFF"
+        android:textAlignment="viewStart"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="45dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Take a selfie and \nstart the new day!"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="#EAF6C7"
+        android:lineSpacingExtra="1dp"
+        android:textAlignment="viewStart"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="150dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+    />
+
+    <Button
+        android:id="@+id/turnBtn"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Let's Go"
+        android:backgroundTint="#FF7F24"
+        android:textColor="#FFF"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+       />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

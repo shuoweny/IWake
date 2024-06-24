@@ -1,0 +1,101 @@
+<!-- Auto layout, variables, and unit scale are not yet supported -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToOutline="true"
+    android:background="#FFFCF3"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Set up \nyour alarm"
+            android:textColor=" #463734"
+            android:textSize="36sp"
+            android:layout_marginTop="48dp"
+            tools:ignore="HardcodedText"
+        />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                app:srcCompat="@drawable/sun_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="27dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Wakeup Alarms"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:layout_marginStart="10dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="700dp"
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+            android:background="#FCF4D7"
+            >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:orientation="vertical">
+
+            <ListView
+                android:id="@+id/alarmView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="#FCF4D7"
+                android:dividerHeight="30dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/addAlarmBtn"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="55dp"
+            android:layout_marginRight="55dp"
+            android:text="+ Add Alarm"
+            android:textSize="12dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:background="@drawable/button_rad" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/alarmFragment"
+        android:name="com.COMP900018.finalproject.AddAlarmFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_weight="1" />
+
+
+</RelativeLayout>

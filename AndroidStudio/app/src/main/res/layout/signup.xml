@@ -1,0 +1,200 @@
+<!-- Auto layout, variables, and unit scale are not yet supported -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToOutline="true"
+    android:background="@drawable/signup_background_with_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Nice to \nmeet you!"
+            android:textColor="#463734"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Email"
+            android:textColor="#463734"
+            android:textSize="18sp"
+            android:layout_marginTop="15dp" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/round_corner_green"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="email"
+            android:paddingStart="20dp"
+            android:textColorHint="#A3A3A3"
+            android:textSize="16dp"
+            android:layout_marginTop="5dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <!-- First Name -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="27dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="First Name"
+                    android:textColor="#463734"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/first_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/round_corner_green"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="First Name"
+                    android:paddingStart="20dp"
+                    android:textColorHint="#A3A3A3"
+                    android:textSize="16dp"
+                    android:layout_marginTop="5dp"/>
+            </LinearLayout>
+
+            <!-- Last Name -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="27dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Last Name"
+                    android:textColor="#463734"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/last_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/round_corner_green"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="Last Name"
+                    android:paddingStart="20dp"
+                    android:textColorHint="#A3A3A3"
+                    android:textSize="16dp"
+                    android:layout_marginTop="5dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Password"
+            android:textColor="#463734"
+            android:textSize="18sp"
+            android:layout_marginTop="20dp" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/round_corner_green"
+            android:fontFamily="@font/poppins_regular"
+            android:inputType="textPassword"
+            android:hint="password"
+            android:paddingStart="20dp"
+            android:textColorHint="#A3A3A3"
+            android:textSize="16dp"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Confirm Password"
+            android:textColor="#463734"
+            android:textSize="18sp"
+            android:layout_marginTop="20dp" />
+
+        <EditText
+            android:id="@+id/confirm_password"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/round_corner_green"
+            android:fontFamily="@font/poppins_regular"
+            android:inputType="textPassword"
+            android:hint="password"
+            android:paddingStart="20dp"
+            android:textColorHint="#A3A3A3"
+            android:textSize="16dp"
+            android:layout_marginTop="5dp"/>
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:minWidth="48dp"
+            android:text="I agree to the terms and conditions"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="#463734"
+            android:textSize="14sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="16dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:id="@+id/return_back_btn"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="#76A94F"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Return Back" />
+
+            <Button
+                android:id="@+id/log_in_btn"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:backgroundTint="#FF700B"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Sign up"
+                android:layout_marginStart="5dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
